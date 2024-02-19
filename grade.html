@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+     <title>Grades</title>
+</head>
+<body>
+ <!-- Header Section -->
+ <div class="header">
+  <div class="hamburger">
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="grade.html">Grades</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="courses.html">Courses</a></li>
+    </ul>
+      </ul>
+  </nav>
+  </div>
+  <div class="title">
+    <h1>BMCC</h1>
+  </div>
+</div>
+  <div class="body-container">
+       <!-- Grades Container -->
+    <div class="grades">
+      <div class="grades-header">
+        <h3> Grades</h3>
+      </div>
+      <div class="grades-content">
+        <p> <h4>What is an INC grade?</h4>
+          Term’s work incomplete. Instructor has reasonable expectation that the student can receive a passing grade after completing the missing assignment(s) and agrees to work with the student to make up the missing work. Student must also agree with the faculty to make the missing work before the INC deadline which is published on <a href="https://www.bmcc.cuny.edu/academics/academic-calendar/spring-regular-2024/">BMCC Academic Calendar </a>
+          on the web.
+          The “INC” grade reverts to an “FIN” if a change is not made by <a href="https://www.bmcc.cuny.edu/academics/academic-calendar/spring-regular-2024/">deadline</a>
+          .
+        </p>
+        <p><h4>How to resolve an Inc grade?</h4>
+          Take the following steps:
+          <ol>
+            <li>You should reach out to your professor to confirm that it is not too late to submit your missing work and which assignments you need to submit in order to earn a letter grade.</li>
+            <li>All missing coursework must be completed no later than the deadline posted on the <a href="https://www.bmcc.cuny.edu/academics/academic-calendar/spring-regular-2024/">BMCC Academic Calendar </a>
+              If your work is not submitted by that deadline, your INC will become an FIN (failure from incomplete). An FIN grade factors into a student’s GPA as an F and a faculty may not be able to change it to a letter grade after the deadline.</li>
+          </ol>
+        </p>
+      </div>
+  </div>
+
+
+  <!-- Move the script to just before the closing </body> tag -->
+  <script>
+    window.watsonAssistantChatOptions = {
+      integrationID: "f583cd58-4e03-4d6f-a25a-4f51766dbf26", // The ID of this integration.
+      region: "us-east", // The region your integration is hosted in.
+      serviceInstanceID: "e53daf06-53bc-4aa5-9107-bdddfff4cf58", // The ID of your service instance.
+      onLoad: async (instance) => { await instance.render(); }
+    };
+    setTimeout(function(){
+      const t=document.createElement('script');
+      t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+      document.head.appendChild(t);
+    });
+  </script>
+    <script src="bmcc.js"></script>
+
+</body>
+</html>

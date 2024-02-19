@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Webpage</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+  <!-- Header Section -->
+  <div class="header">
+    <div class="hamburger">
+      <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="grade.html">Grades</a></li>
+            <li><a href="schedule.html">Schedule</a></li>
+            <li><a href="courses.html">Courses</a></li>
+        </ul>
+    </nav>
+    </div>
+    <div class="title">
+      <h1>BMCC</h1>
+    </div>
+  </div>
+
+
+
+<div class="body-container">
+    <!-- Grades Container -->
+    <div class="grades">
+      <div class="grades-header">
+        <h3> Grades</h3>
+      </div>
+      <div class="grades-content">
+        <p> At BMCC your success is valuable. We understand life can get in the way. If you ever received an <a href="grade.html">INC</a> grade, please know it is no over!! Reach out to your professor as soon as possible. You can use our virtual assistant to find your professor's email.</p>
+        <div class="grades-footer">
+          <a href="grade.html">Click for more</a>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Resources Container -->
+    <div class="courses">
+      <div class="courses-header">
+        <h3> Courses</h3>
+      </div>
+      <div class="courses-content">
+        <p>Click below to see the courses you took and assignements you need to complete to resolve the <a href="grade.html">INC</a> grade</p>
+        <div class="courses-footer">
+          <a href="courses.html">View Courses</a>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Schedule Container -->
+    <div class="Tutor">
+      <div class="tutor-header">
+        <h3>Schedule</h3>
+      </div>
+      <div class="tutor-content">
+        <p>Need a tutor? Click below to view tutor schedules</p>
+      </div>
+      <div class="tutor-footer">
+        <a href="schedule.html">View Full Schedule</a>
+      </div>
+</div>
+ 
+
+
+  <!-- Move the script to just before the closing </body> tag -->
+  <script>
+    window.watsonAssistantChatOptions = {
+      integrationID: "f583cd58-4e03-4d6f-a25a-4f51766dbf26", // The ID of this integration.
+      region: "us-east", // The region your integration is hosted in.
+      serviceInstanceID: "e53daf06-53bc-4aa5-9107-bdddfff4cf58", // The ID of your service instance.
+      onLoad: async (instance) => { await instance.render(); }
+    };
+    setTimeout(function(){
+      const t=document.createElement('script');
+      t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+      document.head.appendChild(t);
+    });
+  </script>
+  <script src="bmcc.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+

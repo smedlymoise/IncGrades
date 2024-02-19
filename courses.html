@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+     <title>Resources</title>
+</head>
+<body>
+   <!-- Header Section -->
+  <div class="header">
+    <div class="hamburger">
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="grade.html">Grades</a></li>
+          <li><a href="schedule.html">Schedule</a></li>
+          <li><a href="courses.html">Courses</a></li>
+      </ul>
+        </ul>
+    </nav>
+    </div>
+    <div class="title">
+      <h1>BMCC</h1>
+    </div>
+  </div>
+
+  <div class="body-container">
+     <!-- Resources Container -->
+    <div class="courses">
+      <div class="courses-header">
+        <h3> Courses</h3>
+      </div>
+      <div class="courses-content">
+         <table id="courseTable">
+          <thead>
+            <tr>
+              <th>Course</th>
+              <th>Missing Assignments</th>
+              <th>Due Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Math 101</td>
+              <td>3</td>
+              <td>2024-02-20</td>
+            </tr>
+            <tr>
+              <td>History 201</td>
+              <td>0</td>
+              <td>2024-02-18</td>
+            </tr>
+            <tr>
+              <td>English 102</td>
+              <td>2</td>
+              <td>2024-02-22</td>
+            </tr>
+            <tr>
+              <td>Science 301</td>
+              <td>5</td>
+              <td>2024-02-25</td>
+            </tr>
+            <tr>
+              <td>Computer Science 202</td>
+              <td>1</td>
+              <td>2024-02-24</td>
+            </tr>
+          </tbody>
+          
+        </table>
+      
+      </div>
+  </div>
+
+
+
+  
+
+  <!-- Move the script to just before the closing </body> tag -->
+  <script>
+    window.watsonAssistantChatOptions = {
+      integrationID: "f583cd58-4e03-4d6f-a25a-4f51766dbf26", // The ID of this integration.
+      region: "us-east", // The region your integration is hosted in.
+      serviceInstanceID: "e53daf06-53bc-4aa5-9107-bdddfff4cf58", // The ID of your service instance.
+      onLoad: async (instance) => { await instance.render(); }
+    };
+    setTimeout(function(){
+      const t=document.createElement('script');
+      t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+      document.head.appendChild(t);
+    });
+  </script>
+    <script src="bmcc.js"></script>
+
+</body>
+</html>
